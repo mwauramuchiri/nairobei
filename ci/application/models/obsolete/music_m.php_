@@ -1,0 +1,74 @@
+<?php
+/**
+* music_m.php
+* @author Your's trully
+*/
+class Music_m extends MY_Model
+{
+	protected $_table_name = 'site_active';
+	protected $_order_by = 'id';
+	protected $_timestamps = FALSE;
+
+	/*public function get_top_sites()
+	{
+		$dd = $this->from_json(1);
+		$r = array();
+		$a = 0;
+		$b = count($dd);
+		$this->_table_name = 'music_sites';
+		while ($a < $b) {
+			
+			$tt = (array)parent::get_by(array('id' => (int)$dd[$a]), TRUE);
+			if (count($tt) > 0) {
+				$r[] = $tt;
+			}
+			$a++;
+		}
+		return $r;
+	}*/
+
+	public function get_top_sites()
+	{
+		// id name link_to_logo link_to_site
+		$a = array(
+			'id' => (int)'1',
+			'name' => 'Mafisi',
+			'link_to_logo' => '/tinymce/blog_media/18c551e724dd9a23d30c818763eaf2bf.jpg',
+			'link_to_site' => 'mafisi.puss'
+			);
+		$b = array(
+			'id' => (int)'1',
+			'name' => 'Mafisi',
+			'link_to_logo' => '/tinymce/blog_media/18c551e724dd9a23d30c818763eaf2bf.jpg',
+			'link_to_site' => 'mafisi.puss'
+			);
+		$c = array(
+			'id' => (int)'1',
+			'name' => 'Mafisi',
+			'link_to_logo' => '/tinymce/blog_media/18c551e724dd9a23d30c818763eaf2bf.jpg',
+			'link_to_site' => 'mafisi.puss'
+			);
+		$d = array(
+			'id' => (int)'1',
+			'name' => 'Mafisi',
+			'link_to_logo' => '/tinymce/blog_media/18c551e724dd9a23d30c818763eaf2bf.jpg',
+			'link_to_site' => 'mafisi.puss'
+			);
+		return array($a,$b,$c,$d);
+	}
+
+	private function from_json($id)
+	{
+		$this->_table_name = 'music_active';
+		$d = (array)parent::get_by(array('id' => (int)$id), TRUE);
+		$dd = json_decode($d['setting_list']);
+		return $dd->list;
+	}
+
+	private function to_json()
+	{
+		$this->_table_name = 'music_active';
+	}
+}
+
+?>
