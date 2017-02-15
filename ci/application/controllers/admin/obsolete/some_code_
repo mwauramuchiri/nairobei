@@ -1,0 +1,39 @@
+		/*$hhiglifr = $this->uri->total_segments();
+		if ($hhiglifr > 3) {
+			$i_want_this = $this->uri->segment(3);
+			$not_this = $this->uri->segment(4);
+			$and_this = $this->uri->segment(5);
+			/**
+			*	search those segments that dont match
+			*	for all other funtions
+			*
+			*
+			if (method_exists($this,$value)) {
+				# code...
+			} else {
+				# code...
+			}
+			
+			echo $i_want_this;
+			$i_want_this = $value;
+			if ($this->$i_want_this()) {
+				echo "can do";
+			} else {
+				echo "can still do";
+			}
+			
+		} else {
+			echo "string";
+		}*/
+
+		/*
+		    $d = array(
+            'id' => (int)'1',
+            'name' => 'Mafisi',
+            'link_to_logo' => '/tinymce/blog_media/18c551e724dd9a23d30c818763eaf2bf.jpg',
+            'link_to_site' => NULL
+            );
+            dump($d);
+            $e = serialize($d);
+            dump(unserialize($e));
+            */
